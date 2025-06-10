@@ -1,2 +1,5 @@
 .DS_Store
 tempCodeRunnerFile.py
+.env
+venv
+__pycache__
