@@ -1,6 +1,8 @@
 from rest_framework import serializers
 from store.models import Product, Collection, Review, Cart, CartItem, Customer
 from decimal import Decimal
+from django.conf import settings
+from django.contrib.auth import get_user_model
 
 
 class ProductSerializer(serializers.ModelSerializer):
@@ -139,7 +141,8 @@ class CustomerSerializer(serializers.ModelSerializer):
     user_id = serializers.IntegerField()
 
     def validate_user_id(self, value):
-        if not Customer.objects.filter(user_id=value).exists():
+        User = get_user_model()
+        if not User.objects.filter(pk=value).exists():
             raise serializers.ValidationError("User does not exist.")
         return value
 
