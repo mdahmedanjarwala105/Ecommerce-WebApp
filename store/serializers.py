@@ -138,6 +138,11 @@ class UpdateCartItemSerializer(serializers.ModelSerializer):
 class CustomerSerializer(serializers.ModelSerializer):
     user_id = serializers.IntegerField()
 
+    def validate_user_id(self, value):
+        if not Customer.objects.filter(user_id=value).exists():
+            raise serializers.ValidationError("User does not exist.")
+        return value
+
     class Meta:
         model = Customer
         fields = [
