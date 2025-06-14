@@ -1,5 +1,6 @@
 from django.db.models.aggregates import Count
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.decorators import action
 from rest_framework import status
 from rest_framework.response import Response
@@ -115,6 +116,13 @@ class CustomerViewSet(
 ):
     serializer_class = CustomerSerializer
     queryset = Customer.objects.all()
+    permission_classes = [IsAuthenticated]
+
+    def get_permissions(self):
+
+        if self.request.method == "GET":
+            return [AllowAny()]
+        return [IsAuthenticated()]
 
     @action(detail=False, methods=["GET", "PUT"])
     def me(self, request):
