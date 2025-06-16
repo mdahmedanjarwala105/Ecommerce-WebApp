@@ -10,7 +10,6 @@ from rest_framework.mixins import (
     CreateModelMixin,
     RetrieveModelMixin,
     DestroyModelMixin,
-    UpdateModelMixin,
 )
 from .pagination import DefaultPagination
 from .filters import ProductFilter
@@ -34,7 +33,7 @@ class ProductViewSet(ModelViewSet):
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_class = ProductFilter
     pagination_class = DefaultPagination
-    permission_classes = []
+    permission_classes = [IsAdminorReadOnly]
     search_fields = ["title", "description"]
     ordering_fields = ["price", "last_update"]
 
@@ -122,7 +121,7 @@ class CustomerViewSet(ModelViewSet):
     @action(
         detail=False,
         methods=["GET", "PUT"],
-        permission_classes=[permissions.IsAuthenticated],
+        permission_classes=[permissions.IsAdminUser],
     )
     def me(self, request):
         (customer, created) = Customer.objects.get_or_create(user_id=request.user.id)
