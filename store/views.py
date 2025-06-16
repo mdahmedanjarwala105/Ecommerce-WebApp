@@ -1,5 +1,6 @@
 from django.db.models.aggregates import Count
 from django_filters.rest_framework import DjangoFilterBackend
+from .permissions import IsAdminorReadOnly, ViewCustomerHistoryPermission
 from rest_framework import permissions
 from rest_framework.decorators import action
 from rest_framework import status
@@ -24,7 +25,6 @@ from .serializers import (
     AddCartItemSerializer,
     UpdateCartItemSerializer,
 )
-from .permissions import IsAdminorReadOnly
 
 
 class ProductViewSet(ModelViewSet):
@@ -117,6 +117,10 @@ class CustomerViewSet(ModelViewSet):
     serializer_class = CustomerSerializer
     queryset = Customer.objects.all()
     permission_classes = [permissions.IsAdminUser]
+
+    @action(detail=True, permission_classes=[ViewCustomerHistoryPermission])
+    def history(self, request, pk):
+        return Response("ok")
 
     @action(
         detail=False,
