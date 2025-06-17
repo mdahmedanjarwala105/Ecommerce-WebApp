@@ -1,5 +1,14 @@
 from rest_framework import serializers
-from store.models import Product, Collection, Review, Cart, CartItem, Customer
+from store.models import (
+    Product,
+    Collection,
+    Review,
+    Cart,
+    CartItem,
+    Customer,
+    Order,
+    OrderItem,
+)
 from decimal import Decimal
 from django.conf import settings
 from django.contrib.auth import get_user_model
@@ -154,4 +163,16 @@ class CustomerSerializer(serializers.ModelSerializer):
             "phone",
             "birth_date",
             "membership",
+        ]
+
+
+class OrderSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Order
+        fields = [
+            "id",
+            "customer",
+            "placed_at",
+            "payment_status",
         ]
