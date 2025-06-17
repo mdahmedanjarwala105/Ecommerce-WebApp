@@ -14,7 +14,16 @@ from rest_framework.mixins import (
 )
 from .pagination import DefaultPagination
 from .filters import ProductFilter
-from .models import Customer, Product, Collection, OrderItem, Review, Cart, CartItem
+from .models import (
+    Customer,
+    Product,
+    Collection,
+    OrderItem,
+    Review,
+    Cart,
+    CartItem,
+    Order,
+)
 from .serializers import (
     CustomerSerializer,
     ProductSerializer,
@@ -24,6 +33,7 @@ from .serializers import (
     CartItemSerializer,
     AddCartItemSerializer,
     UpdateCartItemSerializer,
+    OrderSerializer,
 )
 
 
@@ -87,8 +97,8 @@ class ReviewViewSet(ModelViewSet):
 class CartViewSet(
     CreateModelMixin, RetrieveModelMixin, DestroyModelMixin, GenericViewSet
 ):
-    serializer_class = CartSerializer
     queryset = Cart.objects.prefetch_related("items__product").all()
+    serializer_class = CartSerializer
 
 
 class CartItemViewSet(ModelViewSet):
@@ -114,8 +124,8 @@ class CartItemViewSet(ModelViewSet):
 
 
 class CustomerViewSet(ModelViewSet):
-    serializer_class = CustomerSerializer
     queryset = Customer.objects.all()
+    serializer_class = CustomerSerializer
     permission_classes = [permissions.IsAdminUser]
 
     @action(detail=True, permission_classes=[ViewCustomerHistoryPermission])
@@ -137,3 +147,8 @@ class CustomerViewSet(ModelViewSet):
             serializer.is_valid(raise_exception=True)
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class OrderViewSet(ModelViewSet):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
