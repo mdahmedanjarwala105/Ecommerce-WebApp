@@ -7,7 +7,7 @@ class IsAdminorReadOnly(permissions.BasePermission):
     Unauthenticated users will not be able to access the view.
     """
 
-    def has_permission(self, request, view):  # type: ignore
+    def has_permission(self, request, view):
         # Allow read-only access for authenticated users
         if request.method in permissions.SAFE_METHODS:
             return True

@@ -5,7 +5,7 @@
     "markdown": false,
     "scminput": false
   },
-  "python.analysis.typeCheckingMode": "standard",
+  "python.analysis.typeCheckingMode": "off",
   "editor.fontSize": 24,
   "editor.wordWrap": "on",
   "editor.accessibilitySupport": "off",
