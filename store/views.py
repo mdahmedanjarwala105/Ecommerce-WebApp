@@ -34,6 +34,7 @@ from .serializers import (
     AddCartItemSerializer,
     UpdateCartItemSerializer,
     OrderSerializer,
+    OrderItemSerializer,
 )
 
 
@@ -150,5 +151,14 @@ class CustomerViewSet(ModelViewSet):
 
 
 class OrderViewSet(ModelViewSet):
-    queryset = Order.objects.all()
+    queryset = Order.objects.prefetch_related("items__product").all()
     serializer_class = OrderSerializer
+
+
+class OrderItemViewSet(ModelViewSet):
+    serializer_class = OrderItemSerializer
+
+    def get_queryset(self):  # type: ignore
+        return OrderItem.objects.filter(
+            order_id=self.kwargs["order_pk"]
+        ).select_related("product")
