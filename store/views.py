@@ -34,7 +34,7 @@ from .serializers import (
     AddCartItemSerializer,
     UpdateCartItemSerializer,
     OrderSerializer,
-    OrderItemSerializer,
+    CreateOrderSerializer,
 )
 
 
@@ -86,7 +86,7 @@ class CollectionViewSet(ModelViewSet):
 class ReviewViewSet(ModelViewSet):
     serializer_class = ReviewSerializer
 
-    def get_queryset(self):  # type: ignore
+    def get_queryset(self):
         return Review.objects.filter(product_id=self.kwargs["product_pk"])
 
     def get_serializer_context(self):
@@ -100,20 +100,21 @@ class CartViewSet(
 ):
     queryset = Cart.objects.prefetch_related("items__product").all()
     serializer_class = CartSerializer
+    permission_classes = [permissions.IsAuthenticated]
 
 
 class CartItemViewSet(ModelViewSet):
 
     http_method_names = ["get", "post", "patch", "delete"]
 
-    def get_serializer_class(self):  # type: ignore
+    def get_serializer_class(self):
         if self.request.method in ["POST"]:
             return AddCartItemSerializer
         elif self.request.method in ["PATCH"]:
             return UpdateCartItemSerializer
         return CartItemSerializer
 
-    def get_queryset(self):  # type: ignore
+    def get_queryset(self):
         return CartItem.objects.filter(cart_id=self.kwargs["cart_pk"]).select_related(
             "product"
         )
@@ -151,14 +152,21 @@ class CustomerViewSet(ModelViewSet):
 
 
 class OrderViewSet(ModelViewSet):
-    queryset = Order.objects.prefetch_related("items__product").all()
-    serializer_class = OrderSerializer
+    permission_classes = [permissions.IsAuthenticated]
 
+    def get_serializer_class(self):
+        if self.request.method == "POST":
+            return CreateOrderSerializer
+        return OrderSerializer
 
-class OrderItemViewSet(ModelViewSet):
-    serializer_class = OrderItemSerializer
+    def get_queryset(self):
+        user = self.request.user
+        if user.is_staff:
+            return Order.objects.prefetch_related("items__product").all()
 
-    def get_queryset(self):  # type: ignore
-        return OrderItem.objects.filter(
-            order_id=self.kwargs["order_pk"]
-        ).select_related("product")
+        (customer_id, created) = Customer.objects.only("id").get_or_create(
+            user_id=user.id
+        )
+        return Order.objects.filter(customer_id=customer_id).prefetch_related(
+            "items__product"
+        )
