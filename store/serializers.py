@@ -192,9 +192,9 @@ class CreateOrderSerializer(serializers.ModelSerializer):
     cart_id = serializers.UUIDField()
 
     def save(self, **kwargs):
-        print(self.validated_data["cart_id"])  # type: ignore
+        print(self.validated_data["cart_id"])
         print(self.context["user_id"])
 
-    (customer, created) = Customer.objects.get_or_create(
-        user_id=self.context["user_id"]  # type: ignore
-    )
+        (customer, created) = Customer.objects.get_or_create(
+            user_id=self.context["user_id"]
+        )
