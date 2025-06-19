@@ -170,3 +170,6 @@ class OrderViewSet(ModelViewSet):
         return Order.objects.filter(customer_id=customer_id).prefetch_related(
             "items__product"
         )
+
+    def get_serializer_context(self):
+        return {"user_id": self.request.user.id}

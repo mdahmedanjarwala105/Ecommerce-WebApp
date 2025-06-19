@@ -1,4 +1,7 @@
+from decimal import Decimal
+from django.db import transaction
 from rest_framework import serializers
+from django.contrib.auth import get_user_model
 from store.models import (
     Product,
     Collection,
@@ -9,9 +12,6 @@ from store.models import (
     Order,
     OrderItem,
 )
-from decimal import Decimal
-from django.conf import settings
-from django.contrib.auth import get_user_model
 
 
 class ProductSerializer(serializers.ModelSerializer):
@@ -192,9 +192,30 @@ class CreateOrderSerializer(serializers.ModelSerializer):
     cart_id = serializers.UUIDField()
 
     def save(self, **kwargs):
-        print(self.validated_data["cart_id"])
-        print(self.context["user_id"])
+        with transaction.atomic():
+            # Ensure that the order creation and cart deletion are atomic
 
-        (customer, created) = Customer.objects.get_or_create(
-            user_id=self.context["user_id"]
-        )
+            cart_id = self.validated_data["cart_id"]
+
+            (customer, created) = Customer.objects.get_or_create(
+                user_id=self.context["user_id"]
+            )
+            order = Order.objects.create(customer=customer)
+
+            cart_item = CartItem.objects.select_related("product").filter(
+                cart_id=cart_id
+            )
+
+            order_items = [
+                OrderItem(
+                    order=order,
+                    product=item.product,
+                    unit_price=item.product.price,
+                    quantity=item.quantity,
+                )
+                for item in cart_item
+            ]
+
+            OrderItem.objects.bulk_create(order_items)
+
+            Cart.objects.filter(pk=cart_id).delete()
