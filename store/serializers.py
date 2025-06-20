@@ -12,6 +12,7 @@ from store.models import (
     Order,
     OrderItem,
 )
+from store.signals import order_created
 
 
 class ProductSerializer(serializers.ModelSerializer):
@@ -224,6 +225,8 @@ class CreateOrderSerializer(serializers.ModelSerializer):
             OrderItem.objects.bulk_create(order_items)
 
             Cart.objects.filter(pk=cart_id).delete()
+
+            order_created(self.__class__, order=order)
 
             return order
 
