@@ -17,6 +17,7 @@ from .filters import ProductFilter
 from .models import (
     Customer,
     Product,
+    ProductImage,
     Collection,
     OrderItem,
     Review,
@@ -27,6 +28,7 @@ from .models import (
 from .serializers import (
     CustomerSerializer,
     ProductSerializer,
+    ProductImageSerializer,
     CollectionSerializer,
     ReviewSerializer,
     CartSerializer,
@@ -186,3 +188,15 @@ class OrderViewSet(ModelViewSet):
         return Order.objects.filter(customer_id=customer_id).prefetch_related(
             "items__product"
         )
+
+
+class ProductImageViewSet(ModelViewSet):
+    serializer_class = ProductImageSerializer
+
+    def get_serializer_context(self):
+        return {
+            "product_id": self.kwargs["product_pk"],
+        }
+
+    def get_queryset(self):
+        return ProductImage.objects.filter(id=self.kwargs["product_pk"])
