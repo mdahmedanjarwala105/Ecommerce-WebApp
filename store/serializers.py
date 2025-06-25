@@ -16,7 +16,19 @@ from store.models import (
 from store.signals import order_created
 
 
+class ProductImageSerializer(serializers.ModelSerializer):
+
+    def create(self, validated_data):
+        product_id = self.context["product_id"]
+        return ProductImage.objects.create(product_id=product_id, **validated_data)
+
+    class Meta:
+        model = ProductImage
+        fields = ["id", "image"]
+
+
 class ProductSerializer(serializers.ModelSerializer):
+    images = ProductImageSerializer(many=True, read_only=True)
 
     class Meta:
         model = Product
@@ -28,6 +40,7 @@ class ProductSerializer(serializers.ModelSerializer):
             "price",
             "tax_price",
             "collection",
+            "images",
         ]
 
     tax_price = serializers.SerializerMethodField(method_name="get_tax_price")
@@ -242,14 +255,3 @@ class UpdateOrderSerializer(serializers.ModelSerializer):
     class Meta:
         model = Order
         fields = ["payment_status"]
-
-
-class ProductImageSerializer(serializers.ModelSerializer):
-
-    def create(self, validated_data):
-        product_id = self.context["product_id"]
-        return ProductImage.objects.create(product_id=product_id, **validated_data)
-
-    class Meta:
-        model = ProductImage
-        fields = ["id", "image"]
