@@ -24,12 +24,23 @@ class InventoryFilter(admin.SimpleListFilter):
             return queryset.filter(inventory__gte=10)
 
 
+class ProductImageInline(admin.TabularInline):
+    model = models.ProductImage
+    readonly_fields = ["thumbnail"]
+
+    def thumbnail(self, instance):
+        if instance.image.name != "":
+            return format_html(f'<img src = "{instance.image.url}" class="thumbnail"/>')
+        return ""
+
+
 @admin.register(models.Product)
 class ProductAdmin(admin.ModelAdmin):
     search_fields = ["title__istartswith"]
     autocomplete_fields = ["collection"]
     prepopulated_fields = {"slug": ("title",)}
     actions = ["clear_inventory"]
+    inlines = [ProductImageInline]
     list_display = ["title", "price", "inventory_status", "collection_title"]
     list_editable = ["price"]
     list_per_page = 10
@@ -49,6 +60,9 @@ class ProductAdmin(admin.ModelAdmin):
     def clear_inventory(self, request, queryset):
         updated_count = queryset.update(inventory=0)
         self.message_user(request, f"{updated_count} products were updated.")
+
+    class Media:
+        css = {"all": ["store/style.css"]}
 
 
 @admin.register(models.Customer)
