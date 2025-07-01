@@ -27,6 +27,9 @@ class InventoryFilter(admin.SimpleListFilter):
 class ProductImageInline(admin.TabularInline):
     model = models.ProductImage
     readonly_fields = ["thumbnail"]
+    extra = 0
+    min_num = 1
+    max_num = 10
 
     def thumbnail(self, instance):
         if instance.image.name != "":
