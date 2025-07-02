@@ -8,6 +8,7 @@ def say_hello(request):
             "subject", "message", "from@maabuy.com", ["hello@maabuy.com"]
         )
         email.attach_file("playground/static/images/test_image.jpg")
+        email.send()
     except BadHeaderError:
         pass
     return render(request, "hello.html", {"name": "King"})
