@@ -187,7 +187,7 @@ ADMINS = [("MAA", "admin@maabuy.com")]
 CELERY_BROKER_URL = "redis://localhost:6379/1"
 CELERY_BEAT_SCHEDULE = {
     "notify_customers": {
-        "task": "store.tasks.notify_customers",
+        "task": "playground.tasks.notify_customers",
         "schedule": 5,  # crontab(minute="*/1") every 1 minute or crontab(day_of_week=1, hour=7, minute=30) -> monday-7:30, or 15 * 60 means every 15 minutes
         "args": ["Hello from Celery!"],
         # If there is key word arguments then -> "kwargs": {}
