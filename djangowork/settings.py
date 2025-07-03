@@ -182,3 +182,5 @@ EMAIL_PORT = os.environ.get("EMAIL_PORT")
 DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL")
 
 ADMINS = [("MAA", "admin@maabuy.com")]
+
+CELERY_BROKER_URL = "redis://localhost:6379/1"
