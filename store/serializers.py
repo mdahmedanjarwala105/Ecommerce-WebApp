@@ -245,7 +245,7 @@ class CreateOrderSerializer(serializers.ModelSerializer):
 
             Cart.objects.filter(pk=cart_id).delete()
 
-            order_created(self.__class__, order=order)
+            order_created.send(self.__class__, order=order)
 
             return order
 
