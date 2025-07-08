@@ -209,7 +209,7 @@ class OrderSerializer(serializers.ModelSerializer):
 
 class CreateOrderSerializer(serializers.ModelSerializer):
 
-    cart_id = serializers.UUIDField()
+    cart_id = serializers.UUIDField(write_only=True)
 
     def validate_cart_id(self, cart_id):
         if not Cart.objects.filter(pk=cart_id).exists():
