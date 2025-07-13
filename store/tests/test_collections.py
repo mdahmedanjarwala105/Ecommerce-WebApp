@@ -3,9 +3,9 @@
 # Every test should have 3 parts AAA - Arrange, Act, Assert
 from typing import Callable
 from rest_framework import status
+from rest_framework.response import Response
 from rest_framework.test import APIClient
 import pytest
-from django.http import HttpRequest
 
 
 @pytest.fixture
@@ -14,7 +14,7 @@ def create_collection(api_client: APIClient) -> Callable:
 
     def do_create_collection(
         collection: dict,
-    ) -> HttpRequest:
+    ) -> Response:
         return api_client.post("/store/collection/", collection)
 
     return do_create_collection
