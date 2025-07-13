@@ -1,16 +1,20 @@
 """Test cases for creating a collection."""
 
 # Every test should have 3 parts AAA - Arrange, Act, Assert
+from typing import Callable
 from rest_framework import status
-from conftest import api_client, authenticate
+from rest_framework.test import APIClient
 import pytest
+from django.http import HttpRequest
 
 
 @pytest.fixture
-def create_collection(api_client: api_client) -> callable:
+def create_collection(api_client: APIClient) -> Callable:
     """This fixture returns a function that can be used to create a collection."""
 
-    def do_create_collection(collection) -> callable:
+    def do_create_collection(
+        collection: dict,
+    ) -> HttpRequest:
         return api_client.post("/store/collection/", collection)
 
     return do_create_collection
@@ -21,7 +25,7 @@ class TestCreateCollection:
     """Test cases for creating a collection."""
 
     def test_if_user_is_anonymous_returns_401(
-        self, create_collection: create_collection
+        self, create_collection: Callable
     ) -> None:
         """Test if an anonymous user tries to create a collection."""
 
@@ -30,7 +34,9 @@ class TestCreateCollection:
         assert response.status_code == status.HTTP_401_UNAUTHORIZED
 
     def test_if_user_is_not_admin_returns_403(
-        self, create_collection: create_collection, authenticate: authenticate
+        self,
+        create_collection: Callable,
+        authenticate: Callable,
     ) -> None:
         """Test if a user who is not an admin tries to create a collection."""
 
@@ -41,7 +47,9 @@ class TestCreateCollection:
         assert response.status_code == status.HTTP_403_FORBIDDEN
 
     def test_if_data_is_invalid_returns_400(
-        self, create_collection: create_collection, authenticate: authenticate
+        self,
+        create_collection: Callable,
+        authenticate: Callable,
     ) -> None:
         """Test if a user who is an admin tries to create a collection with invalid data."""
 
@@ -53,7 +61,9 @@ class TestCreateCollection:
         assert response.data["title"] is not None
 
     def test_if_data_is_valid_returns_201(
-        self, create_collection: create_collection, authenticate: authenticate
+        self,
+        create_collection: Callable,
+        authenticate: Callable,
     ) -> None:
         """Test if a user who is an admin tries to create a collection with valid data."""
 
