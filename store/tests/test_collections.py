@@ -82,6 +82,7 @@ class TestRetrieveCollection:
     """Test cases for retrieving a collection."""
 
     def test_if_collection_exists_returns_200(self, api_client: APIClient):
+        """Test if the collection exists in the database."""
 
         collection = baker.make(Collection)
 
