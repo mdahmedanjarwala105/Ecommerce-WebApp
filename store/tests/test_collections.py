@@ -73,3 +73,11 @@ class TestCreateCollection:
 
         assert response.status_code == status.HTTP_201_CREATED
         assert response.data["id"] > 0
+
+@pytest.mark.django_db
+class TestRetrieveCollection:
+    """Test cases for retrieving a collection."""
+
+    def test_if_collection_exists_returns_200(self, api_client: APIClient):
+
+        
