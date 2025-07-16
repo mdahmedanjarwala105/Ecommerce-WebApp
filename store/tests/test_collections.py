@@ -5,6 +5,8 @@ from typing import Callable
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.test import APIClient
+from model_bakery import baker
+from store.models import Collection
 import pytest
 
 
@@ -74,10 +76,20 @@ class TestCreateCollection:
         assert response.status_code == status.HTTP_201_CREATED
         assert response.data["id"] > 0
 
+
 @pytest.mark.django_db
 class TestRetrieveCollection:
     """Test cases for retrieving a collection."""
 
     def test_if_collection_exists_returns_200(self, api_client: APIClient):
 
-        
+        collection = baker.make(Collection)
+
+        response = api_client.get(f"/store/collection/{collection.pk}/")
+
+        assert response.status_code == status.HTTP_200_OK
+        assert response.data == {
+            "id": collection.pk,
+            "title": collection.title,
+            "product_count": 0,
+        }
