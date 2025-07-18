@@ -5,6 +5,7 @@ from rest_framework import permissions
 from rest_framework.decorators import action
 from rest_framework import status
 from rest_framework.response import Response
+from rest_framework.request import Request
 from rest_framework.viewsets import ModelViewSet, GenericViewSet
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.mixins import (
@@ -51,7 +52,7 @@ class ProductViewSet(ModelViewSet):
     search_fields = ["title", "description"]
     ordering_fields = ["price", "last_update"]
 
-    def destroy(self, request, *args, **kwargs):
+    def destroy(self, request: Request, *args: any, **kwargs: any):
 
         if OrderItem.objects.filter(product_id=kwargs["pk"]).count() > 0:
             return Response(
@@ -75,7 +76,7 @@ class CollectionViewSet(ModelViewSet):
     serializer_class = CollectionSerializer
     permission_classes = [IsAdminorReadOnly]
 
-    def destroy(self, request, *args, **kwargs):
+    def destroy(self, request: Request, *args: any, **kwargs: any):
         if Product.objects.filter(collection_id=kwargs["pk"]).count() > 0:
             return Response(
                 {
@@ -134,7 +135,7 @@ class CustomerViewSet(ModelViewSet):
     permission_classes = [permissions.IsAdminUser]
 
     @action(detail=True, permission_classes=[ViewCustomerHistoryPermission])
-    def history(self, request, pk):
+    def history(self, request: Request, pk: int):
         return Response("ok")
 
     @action(
@@ -142,7 +143,7 @@ class CustomerViewSet(ModelViewSet):
         methods=["GET", "PUT"],
         permission_classes=[permissions.IsAdminUser],
     )
-    def me(self, request):
+    def me(self, request: Request):
         customer = Customer.objects.get(user_id=request.user.id)
         if request.method == "GET":
             serializer = CustomerSerializer(customer)
@@ -163,7 +164,7 @@ class OrderViewSet(ModelViewSet):
             return [permissions.IsAdminUser()]
         return [permissions.IsAuthenticated()]
 
-    def create(self, request, *args, **kwargs):
+    def create(self, request: Request, *args: any, **kwargs: any):
         serializer = CreateOrderSerializer(
             data=request.data, context={"user_id": self.request.user.id}
         )
