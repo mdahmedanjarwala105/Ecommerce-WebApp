@@ -2,5 +2,7 @@
   "python.defaultInterpreterPath": "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/bin/python",
   "python.testing.pytestArgs": ["."],
   "python.testing.unittestEnabled": false,
-  "python.testing.pytestEnabled": true
+  "python.testing.pytestEnabled": true,
+  "python-envs.defaultEnvManager": "ms-python.python:system",
+  "python-envs.pythonProjects": []
 }
