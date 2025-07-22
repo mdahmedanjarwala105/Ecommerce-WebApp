@@ -18,7 +18,7 @@ from store.signals import order_created
 
 class ProductImageSerializer(serializers.ModelSerializer):
 
-    def create(self, validated_data):
+    def create(self, validated_data: dict[str, any]):
         product_id = self.context["product_id"]
         return ProductImage.objects.create(product_id=product_id, **validated_data)
 
@@ -64,7 +64,7 @@ class CollectionSerializer(serializers.ModelSerializer):
 
 class ReviewSerializer(serializers.ModelSerializer):
 
-    def create(self, validated_data):
+    def create(self, validated_data: dict[str, any]):
         product_id = self.context["product_id"]
         return Review.objects.create(product_id=product_id, **validated_data)
 
@@ -126,12 +126,12 @@ class CartSerializer(serializers.ModelSerializer):
 class AddCartItemSerializer(serializers.ModelSerializer):
     product_id = serializers.IntegerField()
 
-    def validate_product_id(self, value):
+    def validate_product_id(self, value: int):
         if not Product.objects.filter(pk=value).exists():
             raise serializers.ValidationError("Product does not exist.")
         return value
 
-    def save(self, **kwargs):
+    def save(self, **kwargs: dict[str, any]):
         cart_id = self.context["cart_id"]
         product_id = self.validated_data["product_id"]  # type: ignore
         quantity = self.validated_data["quantity"]  # type: ignore
@@ -169,7 +169,7 @@ class UpdateCartItemSerializer(serializers.ModelSerializer):
 class CustomerSerializer(serializers.ModelSerializer):
     user_id = serializers.IntegerField(read_only=True)
 
-    def validate_user_id(self, value):
+    def validate_user_id(self, value: int):
         User = get_user_model()
         if not User.objects.filter(pk=value).exists():
             raise serializers.ValidationError("User does not exist.")
@@ -211,14 +211,14 @@ class CreateOrderSerializer(serializers.ModelSerializer):
 
     cart_id = serializers.UUIDField(write_only=True)
 
-    def validate_cart_id(self, cart_id):
+    def validate_cart_id(self, cart_id: int):
         if not Cart.objects.filter(pk=cart_id).exists():
             raise serializers.ValidationError("Cart does not exist.")
         if CartItem.objects.filter(cart_id=cart_id).count() == 0:
             raise serializers.ValidationError("Cart is empty.")
         return cart_id
 
-    def save(self, **kwargs):
+    def save(self, **kwargs: dict[str, any]):
         with transaction.atomic():
             # Ensure that the order creation and cart deletion are atomic
 
