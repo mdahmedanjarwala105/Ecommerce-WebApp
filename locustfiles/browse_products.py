@@ -9,13 +9,13 @@ class WebsiteUser(HttpUser):
     def view_products(self):
         collection_id = randint(2, 6)
         self.client.get(
-            "/store/product/?collection_id={collection.id}", name="store/products/"
+            f"/store/product/?collection_id={collection_id}", name="store/products/"
         )
 
     @task(4)
     def view_product(self):
         product_id = randint(1, 1000)
-        self.client.get("/store/product/{product_id}", name="/store/products/:id")
+        self.client.get(f"/store/product/{product_id}", name="/store/products/:id")
 
     @task(1)
     def add_to_cart(self):
