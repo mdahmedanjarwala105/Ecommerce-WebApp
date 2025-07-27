@@ -20,6 +20,7 @@ flower = "*"
 djangorestframework = "*"
 djangorestframework-stubs = "*"
 django-stubs = "*"
+django-redis = "*"
 
 [dev-packages]
 pytest = "*"
