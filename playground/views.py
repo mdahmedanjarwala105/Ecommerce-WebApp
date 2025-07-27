@@ -2,12 +2,15 @@ from django.shortcuts import render
 from django.http import HttpRequest
 import requests
 from django.views.decorators.cache import cache_page
+from rest_framework.views import APIView
+from django.utils.decorators import method_decorator
 
 
-@cache_page(5 * 60)
-def say_hello(request: HttpRequest):
+class HelloView(APIView):
 
-    response = requests.get("https://httpbin.org/delay/2")
-    data = response.json()
+    @method_decorator(cache_page(5 * 60))
+    def get(self, request: HttpRequest):
 
-    return render(request, "hello.html", {"name": data})
+        requests.get("https://httpbin.org/delay/2")
+
+        return render(request, "hello.html", {"name": "King"})
