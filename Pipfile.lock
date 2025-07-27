@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "33ef2deee8276873c428246e35e29c3737b41f499f119bb21868e452582e73b9"
+            "sha256": "fc274ea5589c803fc6ce4be707125a83376d251c7958a96f1b2942ef9574c167"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -1046,6 +1046,15 @@
             "markers": "python_version >= '3.10'",
             "version": "==5.2.4"
         },
+        "django-silk": {
+            "hashes": [
+                "sha256:2247870ac8080b6c6c5db17f2f1042d39d95e4a5fa061d661882777ec9adb672",
+                "sha256:caf720a06e24a6cf1acf825c1868b2a6ece8158b13725363f6d3a1a9994d0fa6"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.9'",
+            "version": "==5.4.0"
+        },
         "docopt": {
             "hashes": [
                 "sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"
@@ -1210,6 +1219,14 @@
             ],
             "markers": "python_version >= '3.9'",
             "version": "==2.3.4"
+        },
+        "gprof2dot": {
+            "hashes": [
+                "sha256:0742e4c0b4409a5e8777e739388a11e1ed3750be86895655312ea7c20bd0090e",
+                "sha256:35743e2d2ca027bf48fa7cba37021aaf4a27beeae1ae8e05a50b55f1f921a6ce"
+            ],
+            "markers": "python_version >= '3.8'",
+            "version": "==2025.4.14"
         },
         "greenlet": {
             "hashes": [
