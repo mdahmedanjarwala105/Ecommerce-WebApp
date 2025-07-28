@@ -3,3 +3,6 @@ tempCodeRunnerFile.py
 .env
 venv
 __pycache__
+/media/
+/static/
+*.pyc
