@@ -1,12 +1,12 @@
-body { 
+body {
   margin: 0;
 }
 
-.home-page { 
+.home-page {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1ec8aa;
+  background-color: #000000;
   height: 100vh;
   width: 100vw;
 }
