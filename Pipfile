@@ -21,6 +21,7 @@ djangorestframework = "*"
 djangorestframework-stubs = "*"
 django-stubs = "*"
 django-redis = "*"
+whitenoise = "*"
 
 [dev-packages]
 pytest = "*"
