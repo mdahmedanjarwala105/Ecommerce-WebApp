@@ -1,0 +1,82 @@
+2025-07-29 16:10:58,783 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-07-29 16:11:01,784 (WARNING) - django.request - Not Found: /favicon.ico
+2025-07-29 16:11:08,826 (ERROR) - django.request - Internal Server Error: /playground/hello/
+Traceback (most recent call last):
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django_redis/cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django_redis/cache.py", line 99, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django_redis/client/default.py", line 300, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 61 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/utils/decorators.py", line 185, in _view_wrapper
+    result = _pre_process_request(request, *args, **kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/utils/decorators.py", line 131, in _pre_process_request
+    result = middleware.process_request(request)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/middleware/cache.py", line 161, in process_request
+    cache_key = get_cache_key(request, self.key_prefix, "GET", cache=self.cache)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/utils/cache.py", line 392, in get_cache_key
+    headerlist = cache.get(cache_key)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/debug_toolbar/panels/cache.py", line 42, in wrapper
+    return panel._record_call(cache, name, original_method, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/debug_toolbar/panels/cache.py", line 151, in _record_call
+    value = original_method(*args, **kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django_redis/cache.py", line 92, in get
+    value = self._get(key, default, version, client)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django_redis/cache.py", line 36, in _decorator
+    raise e.__cause__  # noqa: B904
+    ^^^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django_redis/client/default.py", line 298, in get
+    value = client.get(key)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name, keys=[name])
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/redis/client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/redis/client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+                              ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/redis/utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/redis/connection.py", line 1530, in get_connection
+    connection.connect()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/redis/connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/redis/connection.py", line 391, in connect_check_health
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to 127.0.0.1:6379. Connection refused.
+2025-07-29 16:11:39,308 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/playground/views.py changed, reloading.
+2025-07-29 16:11:39,574 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-07-29 16:11:39,963 (INFO) - playground.views - Calling httpbin
+2025-07-29 16:11:44,051 (INFO) - playground.views - Received the response
+2025-07-29 16:12:32,361 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/playground/views.py changed, reloading.
+2025-07-29 16:12:32,668 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
