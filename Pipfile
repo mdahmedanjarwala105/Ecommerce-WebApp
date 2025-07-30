@@ -23,6 +23,7 @@ django-stubs = "*"
 django-redis = "*"
 whitenoise = "*"
 gunicorn = "*"
+django-silk = "*"
 
 [dev-packages]
 pytest = "*"
