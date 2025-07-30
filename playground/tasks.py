@@ -3,7 +3,7 @@ from celery import shared_task
 
 
 @shared_task
-def notify_customer(message):
+def notify_customer(message: str):
     print("Sending multiple emails...")
     print(message)
     sleep(10)
