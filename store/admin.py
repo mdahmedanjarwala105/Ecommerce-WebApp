@@ -17,7 +17,7 @@ class InventoryFilter(admin.SimpleListFilter):
     ) -> list[tuple[str, str]]:
         return [("<10", "Low"), (">=10", "OK")]
 
-    def queryset(self, request, queryset):
+    def queryset(self, request: HttpRequest, queryset: models.QuerySet):
         if self.value() == "<10":
             return queryset.filter(inventory__lt=10)
         if self.value() == ">=10":
@@ -31,9 +31,14 @@ class ProductImageInline(admin.TabularInline):
     min_num = 1
     max_num = 10
 
-    def thumbnail(self, instance):
+    # def thumbnail(self, instance: models.ProductImage):
+    #     if instance.image.name != "":
+    #         return format_html(f'<img src = "{instance.image.url}" class="thumbnail"/>')
+    #     return ""
+
+    def thumbnail(self, instance: models.ProductImage):
         if instance.image.name != "":
-            return format_html(f'<img src = "{instance.image.url}" class="thumbnail"/>')
+            return format_html('<img src="{}" class="thumbnail"/>', instance.image.url)
         return ""
 
 
@@ -50,17 +55,17 @@ class ProductAdmin(admin.ModelAdmin):
     list_select_related = ["collection"]
     list_filter = ["collection", "last_update", InventoryFilter]
 
-    def collection_title(self, product):
+    def collection_title(self, product: models.Product):
         return product.collection
 
     @admin.display(ordering="inventory")
-    def inventory_status(self, product):
+    def inventory_status(self, product: models.Product):
         if product.inventory < 10:
             return "Low"
         return "OK"
 
     @admin.action(description="Clear inventory")
-    def clear_inventory(self, request, queryset):
+    def clear_inventory(self, request: HttpRequest, queryset: models.QuerySet):
         updated_count = queryset.update(inventory=0)
         self.message_user(request, f"{updated_count} products were updated.")
 
@@ -78,7 +83,7 @@ class CustomerAdmin(admin.ModelAdmin):
     search_fields = ["user__first_name__istartswith", "user__last_name__istartswith"]
 
     @admin.display(ordering="orders_count")
-    def orders_count(self, customer):
+    def orders_count(self, customer: models.Customer):
         url = (
             reverse("admin:store_order_changelist")
             + "?"
@@ -86,7 +91,7 @@ class CustomerAdmin(admin.ModelAdmin):
         )
         return format_html('<a href="{}">{}</a>', url, customer.orders_count)
 
-    def get_queryset(self, request):
+    def get_queryset(self, request: HttpRequest):
         return super().get_queryset(request).annotate(orders_count=Count("order"))
 
 
@@ -111,7 +116,7 @@ class CollectionAdmin(admin.ModelAdmin):
     search_fields = ["title__istartswith"]
 
     @admin.display(ordering="products_count")
-    def products_count(self, collection):
+    def products_count(self, collection: models.Collection):
         url = (
             reverse("admin:store_product_changelist")
             + "?"
@@ -119,5 +124,5 @@ class CollectionAdmin(admin.ModelAdmin):
         )
         return format_html('<a href="{}">{}</a>', url, collection.products_count)
 
-    def get_queryset(self, request):
+    def get_queryset(self, request: HttpRequest):
         return super().get_queryset(request).annotate(products_count=Count("products"))
