@@ -7,3 +7,5 @@ __pycache__
 /static/
 *.pyc
 general.log
+.vscode
+*.log
