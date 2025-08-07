@@ -24,6 +24,9 @@ django-redis = "*"
 whitenoise = "*"
 gunicorn = "*"
 django-silk = "*"
+pandas = "*"
+numpy = "*"
+scikit-learn = "*"
 
 [dev-packages]
 pytest = "*"
