@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 django-debug-toolbar = "*"
 django = "*"
-mysqlclient = "*"
 drf-nested-routers = "*"
 django-filter = "*"
 djoser = "*"
@@ -27,6 +26,10 @@ django-silk = "*"
 pandas = "*"
 numpy = "*"
 scikit-learn = "*"
+ipykernel = "*"
+matplotlib = "*"
+notebook = "*"
+mysqlclient = "*"
 
 [dev-packages]
 pytest = "*"

@@ -10,6 +10,9 @@ class Promotion(models.Model):
     description = models.CharField(max_length=255)
     discount = models.FloatField()
 
+    class Meta:
+        app_label = "store"
+
 
 class Collection(models.Model):
     title = models.CharField(max_length=255)
@@ -19,6 +22,9 @@ class Collection(models.Model):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        app_label = "store"
 
 
 class Product(models.Model):
@@ -38,6 +44,9 @@ class Product(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+        app_label = "store"
+
 
 class ProductImage(models.Model):
     product = models.ForeignKey(
@@ -46,6 +55,9 @@ class ProductImage(models.Model):
     image = models.ImageField(
         upload_to="store/images", validators=[validators.validate_file_size]
     )
+
+    class Meta:
+        app_label = "store"
 
 
 class Customer(models.Model):
@@ -80,6 +92,7 @@ class Customer(models.Model):
     class Meta:
         ordering = ["user__first_name", "user__last_name"]
         permissions = [("view_history", "Can view history")]
+        app_label = "store"
 
 
 class Order(models.Model):
@@ -103,6 +116,7 @@ class Order(models.Model):
         permissions = [
             ("cancel_order", "Can cancel order"),
         ]
+        app_label = "store"
 
 
 class OrderItem(models.Model):
@@ -113,6 +127,9 @@ class OrderItem(models.Model):
     quantity = models.PositiveSmallIntegerField()
     unit_price = models.DecimalField(max_digits=6, decimal_places=2)
 
+    class Meta:
+        app_label = "store"
+
 
 class Address(models.Model):
     city = models.CharField(max_length=255)
@@ -120,10 +137,16 @@ class Address(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     zip = models.PositiveIntegerField(null=True)
 
+    class Meta:
+        app_label = "store"
+
 
 class Cart(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid4)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        app_label = "store"
 
 
 class CartItem(models.Model):
@@ -133,6 +156,7 @@ class CartItem(models.Model):
 
     class Meta:
         unique_together = [["cart", "product"]]
+        app_label = "store"
 
 
 class Review(models.Model):
@@ -142,3 +166,6 @@ class Review(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        app_label = "store"
