@@ -6,7 +6,7 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.test import APIClient
 from model_bakery import baker
-from store.models import Product, Collection
+from store.models import Collection
 import pytest
 
 
