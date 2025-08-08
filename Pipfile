@@ -30,6 +30,7 @@ ipykernel = "*"
 matplotlib = "*"
 notebook = "*"
 mysqlclient = "*"
+pymysql = "*"
 
 [dev-packages]
 pytest = "*"
