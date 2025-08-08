@@ -132,3 +132,42 @@ redis.exceptions.ConnectionError: Error 61 connecting to 127.0.0.1:6379. Connect
 2025-08-07 18:14:27,479 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
 2025-08-08 12:18:07,760 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
 2025-08-08 12:18:07,858 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-08 19:17:39,866 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-08 19:17:40,068 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-08 19:17:44,421 (WARNING) - django.request - Unauthorized: /store/collection/
+2025-08-08 19:17:44,440 (WARNING) - django.request - Forbidden: /store/collection/
+2025-08-08 19:17:44,458 (WARNING) - django.request - Bad Request: /store/collection/
+2025-08-08 19:17:44,571 (WARNING) - django.request - Not Found: /store/collection/9999/
+2025-08-08 19:17:44,589 (WARNING) - django.request - Unauthorized: /store/product/
+2025-08-08 19:17:44,608 (WARNING) - django.request - Forbidden: /store/product/
+2025-08-08 19:17:44,629 (WARNING) - django.request - Bad Request: /store/product/
+2025-08-08 19:17:44,703 (WARNING) - django.request - Not Found: /store/product/9999/
+2025-08-08 19:19:31,927 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-08 19:19:32,006 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-08 19:22:58,029 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-08 19:23:21,741 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-08 19:23:39,107 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-08 19:26:58,554 (WARNING) - django.request - Unauthorized: /store/collection/
+2025-08-08 19:26:58,572 (WARNING) - django.request - Forbidden: /store/collection/
+2025-08-08 19:26:58,591 (WARNING) - django.request - Bad Request: /store/collection/
+2025-08-08 19:26:58,697 (WARNING) - django.request - Not Found: /store/collection/9999/
+2025-08-08 19:26:58,715 (WARNING) - django.request - Unauthorized: /store/product/
+2025-08-08 19:26:58,735 (WARNING) - django.request - Forbidden: /store/product/
+2025-08-08 19:26:58,755 (WARNING) - django.request - Bad Request: /store/product/
+2025-08-08 19:26:58,829 (WARNING) - django.request - Not Found: /store/product/9999/
+2025-08-08 19:27:11,700 (WARNING) - django.request - Unauthorized: /store/collection/
+2025-08-08 19:27:11,723 (WARNING) - django.request - Forbidden: /store/collection/
+2025-08-08 19:27:11,756 (WARNING) - django.request - Bad Request: /store/collection/
+2025-08-08 19:27:11,863 (WARNING) - django.request - Not Found: /store/collection/9999/
+2025-08-08 19:27:11,883 (WARNING) - django.request - Unauthorized: /store/product/
+2025-08-08 19:27:11,906 (WARNING) - django.request - Forbidden: /store/product/
+2025-08-08 19:27:11,926 (WARNING) - django.request - Bad Request: /store/product/
+2025-08-08 19:27:12,001 (WARNING) - django.request - Not Found: /store/product/9999/
+2025-08-08 19:27:28,956 (WARNING) - django.request - Unauthorized: /store/collection/
+2025-08-08 19:27:28,975 (WARNING) - django.request - Forbidden: /store/collection/
+2025-08-08 19:27:28,994 (WARNING) - django.request - Bad Request: /store/collection/
+2025-08-08 19:27:29,099 (WARNING) - django.request - Not Found: /store/collection/9999/
+2025-08-08 19:27:29,117 (WARNING) - django.request - Unauthorized: /store/product/
+2025-08-08 19:27:29,138 (WARNING) - django.request - Forbidden: /store/product/
+2025-08-08 19:27:29,158 (WARNING) - django.request - Bad Request: /store/product/
+2025-08-08 19:27:29,233 (WARNING) - django.request - Not Found: /store/product/9999/
