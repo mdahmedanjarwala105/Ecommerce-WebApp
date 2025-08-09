@@ -1,7 +1,5 @@
 import os
 from celery import Celery
-import pymysql
-pymysql.install_as_MySQLdb()
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "djangowork.settings.dev")
 

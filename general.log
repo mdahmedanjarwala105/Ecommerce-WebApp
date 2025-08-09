@@ -171,3 +171,14 @@ redis.exceptions.ConnectionError: Error 61 connecting to 127.0.0.1:6379. Connect
 2025-08-08 19:27:29,138 (WARNING) - django.request - Forbidden: /store/product/
 2025-08-08 19:27:29,158 (WARNING) - django.request - Bad Request: /store/product/
 2025-08-08 19:27:29,233 (WARNING) - django.request - Not Found: /store/product/9999/
+2025-08-09 08:50:13,681 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-09 09:45:21,037 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-09 12:36:27,004 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-09 12:36:31,674 (WARNING) - django.request - Unauthorized: /store/collection/
+2025-08-09 12:36:31,693 (WARNING) - django.request - Forbidden: /store/collection/
+2025-08-09 12:36:31,711 (WARNING) - django.request - Bad Request: /store/collection/
+2025-08-09 12:36:31,823 (WARNING) - django.request - Not Found: /store/collection/9999/
+2025-08-09 12:36:31,841 (WARNING) - django.request - Unauthorized: /store/product/
+2025-08-09 12:36:31,860 (WARNING) - django.request - Forbidden: /store/product/
+2025-08-09 12:36:31,881 (WARNING) - django.request - Bad Request: /store/product/
+2025-08-09 12:36:31,956 (WARNING) - django.request - Not Found: /store/product/9999/
