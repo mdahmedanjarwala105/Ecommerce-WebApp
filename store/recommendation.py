@@ -1,9 +1,11 @@
+# Importing The Libraries
+
 import sys
 import os
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from .models import Product
+from store.models import Product
 
 def get_similar_products(product_pk: int):
     """
@@ -31,18 +33,18 @@ def get_similar_products(product_pk: int):
     vectorizer = TfidfVectorizer(stop_words='english')
     tfidf_matrix = vectorizer.fit_transform(df['features'])
 
-    # Check if the given product_pk exists
+    # Checking if the given product_pk exists
     if product_pk not in df['pk'].values:
         return []
 
-    # Find index of the product
+    # Finding index of the product
     idx = df[df['pk'] == product_pk].index[0]
 
-    # Calculate cosine similarity of this product with all products
+    # Calculating cosine similarity of product_pk with all products
     similarity_score = cosine_similarity(tfidf_matrix[idx], tfidf_matrix)
 
-    # Getting top 5 similar indices
-    similar_indices = similarity_score.argsort()[0][-6:-1]
+    # Getting top 6 similar indices
+    similar_indices = similarity_score.argsort()[0][-7:-1]
 
     #Getting top 6 similar Products
     similar_titles = df.iloc[similar_indices]['title'].tolist()
