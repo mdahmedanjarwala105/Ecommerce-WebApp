@@ -40,6 +40,7 @@ from .serializers import (
     CreateOrderSerializer,
     UpdateOrderSerializer,
 )
+from .recommendation import get_similar_products
 
 
 class ProductViewSet(ModelViewSet):
@@ -69,6 +70,11 @@ class ProductViewSet(ModelViewSet):
                 status=status.HTTP_405_METHOD_NOT_ALLOWED,
             )
         return super().destroy(request, *args, **kwargs)
+
+    @action(detail=True, methods=["get"], permission_classes=[IsAdminorReadOnly])
+    def recommendations(self, request: Request, pk: int):
+        titles = get_similar_products(int(pk))
+        return Response({"Products You may like: ": titles})
 
 
 class CollectionViewSet(ModelViewSet):
