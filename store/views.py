@@ -75,13 +75,11 @@ class ProductViewSet(ModelViewSet):
 
     @action(detail=True, methods=["get"], permission_classes=[IsAdminorReadOnly])
     def recommendations(self, request: Request, pk: int) -> Response:
-        version = cache.get("recs_version", 1)
-        cache_key = f"recs:{pk}:v{version}"
+        cache_key = "recommendations"
 
-        titles = cache.get(cache_key)
-        if titles is None:
+        if cache.get(cache_key) is None:
             titles = get_similar_products(int(pk))
-            cache.set(cache_key, titles, 60 * 10)
+            cache.set(cache_key, titles)
 
         return Response({"products_you_may_like": titles})
 
