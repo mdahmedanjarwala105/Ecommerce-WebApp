@@ -1,6 +1,8 @@
+from .permissions import IsAdminorReadOnly, ViewCustomerHistoryPermission
 from django.db.models.aggregates import Count
 from django_filters.rest_framework import DjangoFilterBackend
-from .permissions import IsAdminorReadOnly, ViewCustomerHistoryPermission
+from django.core.cache import cache
+from rest_framework.decorators import action
 from rest_framework import permissions
 from rest_framework.decorators import action
 from rest_framework import status
@@ -72,9 +74,16 @@ class ProductViewSet(ModelViewSet):
         return super().destroy(request, *args, **kwargs)
 
     @action(detail=True, methods=["get"], permission_classes=[IsAdminorReadOnly])
-    def recommendations(self, request: Request, pk: int):
-        titles = get_similar_products(int(pk))
-        return Response({"Products You may like: ": titles})
+    def recommendations(self, request: Request, pk: int) -> Response:
+        version = cache.get("recs_version", 1)
+        cache_key = f"recs:{pk}:v{version}"
+
+        titles = cache.get(cache_key)
+        if titles is None:
+            titles = get_similar_products(int(pk))
+            cache.set(cache_key, titles, 60 * 10)
+
+        return Response({"products_you_may_like": titles})
 
 
 class CollectionViewSet(ModelViewSet):
