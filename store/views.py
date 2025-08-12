@@ -81,7 +81,7 @@ class ProductViewSet(ModelViewSet):
             titles = get_similar_products(int(pk))
             cache.set(cache_key, titles)
 
-        return Response({"products_you_may_like": titles})
+        return Response({"products_you_may_like": cache.get(cache_key)})
 
 
 class CollectionViewSet(ModelViewSet):

@@ -259,3 +259,118 @@ redis.exceptions.ConnectionError: Error 61 connecting to 127.0.0.1:6379. Connect
 2025-08-12 11:13:55,857 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
 2025-08-12 11:13:57,921 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
 2025-08-12 11:13:59,860 (WARNING) - django.request - Not Found: /favicon.ico
+2025-08-12 16:21:36,757 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-12 16:21:37,815 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-12 16:22:03,943 (ERROR) - django.request - Internal Server Error: /store/product/6/recommendations/
+Traceback (most recent call last):
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/mdahmedking6/DjangoWork/store/views.py", line 84, in recommendations
+    return Response({"products_you_may_like": titles})
+                                              ^^^^^^
+UnboundLocalError: cannot access local variable 'titles' where it is not associated with a value
+2025-08-12 16:22:12,434 (ERROR) - django.request - Internal Server Error: /store/product/6/recommendations/
+Traceback (most recent call last):
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/mdahmedking6/DjangoWork/store/views.py", line 84, in recommendations
+    return Response({"products_you_may_like": titles})
+                                              ^^^^^^
+UnboundLocalError: cannot access local variable 'titles' where it is not associated with a value
+2025-08-12 16:22:13,498 (ERROR) - django.request - Internal Server Error: /store/product/6/recommendations/
+Traceback (most recent call last):
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/mdahmedking6/DjangoWork/store/views.py", line 84, in recommendations
+    return Response({"products_you_may_like": titles})
+                                              ^^^^^^
+UnboundLocalError: cannot access local variable 'titles' where it is not associated with a value
+2025-08-12 16:22:40,415 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-12 16:22:40,812 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-12 16:22:41,633 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-12 16:22:45,970 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-12 16:22:46,352 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-12 16:22:47,121 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-12 16:22:50,390 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-12 16:22:50,766 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-12 16:22:51,487 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-12 16:22:54,441 (ERROR) - django.request - Internal Server Error: /store/product/6/recommendations/
+Traceback (most recent call last):
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/mdahmedking6/DjangoWork/store/views.py", line 84, in recommendations
+    return Response({"products_you_may_like": cache.get(titles)})
+                                                        ^^^^^^
+UnboundLocalError: cannot access local variable 'titles' where it is not associated with a value
+2025-08-12 16:23:27,022 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-12 16:23:27,402 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-12 16:23:28,186 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-12 16:23:45,075 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-12 16:23:45,496 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-12 16:23:46,216 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-12 16:25:12,733 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-12 16:25:13,489 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
