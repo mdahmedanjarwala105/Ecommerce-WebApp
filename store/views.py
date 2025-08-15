@@ -43,6 +43,11 @@ from .serializers import (
     UpdateOrderSerializer,
 )
 from .recommendation import get_similar_products
+from decimal import Decimal
+from django.shortcuts import get_object_or_404, redirect, render
+from django.db import transaction
+from uuid import UUID
+from django.http import HttpResponseBadRequest
 
 
 class ProductViewSet(ModelViewSet):
@@ -214,3 +219,58 @@ class ProductImageViewSet(ModelViewSet):
 
     def get_queryset(self):
         return ProductImage.objects.filter(product_id=self.kwargs["product_pk"])
+
+
+def _get_or_create_cart(request: Request) -> Cart:
+    cart_id = request.session.get("cart_id")
+    cart = None
+    if cart_id:
+        try:
+            cart = Cart.objects.get(pk=cart_id)
+        except Cart.DoesNotExist:
+            cart = None
+    if cart is None:
+        cart = Cart.objects.create()
+        request.session["cart_id"] = str(cart.id)
+    return cart
+
+
+def _uuid_from_any(s: str) -> UUID:
+    s = s.replace("-", "")
+    return UUID(s)
+
+
+def _get_or_create_cart(request: Request) -> Cart:
+    cart_id = request.session.get("cart_id")
+    cart = None
+    if cart_id:
+        try:
+            cart = Cart.objects.get(pk=cart_id)
+        except Cart.DoesNotExist:
+            cart = None
+    if cart is None:
+        cart = Cart.objects.create()
+        request.session["cart_id"] = str(cart.id)
+    return cart
+
+
+def cart_page(request: Request):
+    """
+    Minimal HTML cart page.
+    If ?id=<uuid> is provided, bind that cart to this session; otherwise use session cart.
+    """
+    bind = request.GET.get("id")
+    if bind:
+        try:
+            cart = Cart.objects.get(pk=_uuid_from_any(bind))
+            request.session["cart_id"] = str(cart.id)  # bind to session
+        except (ValueError, Cart.DoesNotExist):
+            return HttpResponseBadRequest("Invalid cart id")
+    else:
+        cart = _get_or_create_cart(request)
+
+    items = CartItem.objects.select_related("product").filter(cart=cart)
+    total = sum(i.product.price * i.quantity for i in items)
+    return render(
+        request, "store/cart.html", {"cart": cart, "items": items, "total": total}
+    )

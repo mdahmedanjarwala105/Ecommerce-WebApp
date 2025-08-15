@@ -374,3 +374,353 @@ UnboundLocalError: cannot access local variable 'titles' where it is not associa
 2025-08-12 16:23:46,216 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
 2025-08-12 16:25:12,733 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
 2025-08-12 16:25:13,489 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 14:13:00,029 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 14:13:03,817 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 14:13:07,412 (WARNING) - django.request - Not Found: /favicon.ico
+2025-08-15 14:18:20,430 (WARNING) - django.request - Not Found: /store/cart
+2025-08-15 16:10:56,903 (WARNING) - django.request - Unauthorized: /store/carts/
+2025-08-15 16:11:44,879 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/urls.py changed, reloading.
+2025-08-15 16:11:45,552 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:11:46,844 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 16:11:48,083 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/urls.py changed, reloading.
+2025-08-15 16:11:48,549 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:11:59,047 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/urls.py changed, reloading.
+2025-08-15 16:11:59,535 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:12:05,975 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/urls.py changed, reloading.
+2025-08-15 16:12:06,527 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:12:08,980 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/urls.py changed, reloading.
+2025-08-15 16:12:09,326 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:12:38,389 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/urls.py changed, reloading.
+2025-08-15 16:12:38,817 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:18:17,063 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-15 16:18:17,536 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:18:47,789 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/core/urls.py changed, reloading.
+2025-08-15 16:18:48,297 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:18:56,804 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/core/urls.py changed, reloading.
+2025-08-15 16:18:57,295 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:19:01,489 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/core/urls.py changed, reloading.
+2025-08-15 16:19:01,986 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:19:13,464 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/core/urls.py changed, reloading.
+2025-08-15 16:19:13,982 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:24:20,298 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-15 16:24:20,912 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:24:38,772 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-15 16:24:39,275 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:24:40,374 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 16:25:08,183 (WARNING) - django.request - Bad Request: /checkout/a5e3c843-8020-488c-a9d4-ecdc32c67307/start/
+2025-08-15 16:25:20,380 (WARNING) - django.request - Unauthorized: /store/carts/
+2025-08-15 16:25:46,337 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-15 16:25:46,855 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:25:48,083 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 16:25:51,390 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-15 16:25:51,916 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:25:52,954 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 16:25:56,248 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-15 16:25:56,762 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:25:57,787 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 16:26:02,129 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-15 16:26:02,666 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:26:03,746 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 16:26:07,046 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-15 16:26:07,548 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:26:08,579 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 16:26:24,350 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-15 16:26:24,847 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:26:25,867 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 16:26:29,070 (WARNING) - django.request - Method Not Allowed: /store/carts/
+2025-08-15 16:26:40,696 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-15 16:26:41,256 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:26:42,502 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 16:31:11,965 (WARNING) - django.request - Bad Request: /checkout/649c366d-6fdc-4ea3-ac5a-28fcff6caadc/start/
+2025-08-15 16:32:11,625 (WARNING) - django.request - Not Found: /checkout/59146e09970c4979a8d17ccd9f4fde61/start/
+2025-08-15 16:32:35,438 (WARNING) - django.request - Unauthorized: /store/carts/59146e09970c4979a8d17ccd9f4fde61/
+2025-08-15 16:32:42,627 (WARNING) - django.request - Bad Request: /checkout/649c366d-6fdc-4ea3-ac5a-28fcff6caadc/start/
+2025-08-15 16:34:07,695 (WARNING) - django.request - Bad Request: /checkout/649c366d-6fdc-4ea3-ac5a-28fcff6caadc/start/
+2025-08-15 16:34:08,545 (WARNING) - django.request - Unauthorized: /store/carts/59146e09970c4979a8d17ccd9f4fde61/
+2025-08-15 16:34:16,280 (WARNING) - django.request - Unauthorized: /store/carts/59146e09970c4979a8d17ccd9f4fde61/
+2025-08-15 16:37:27,380 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-15 16:37:28,048 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:37:42,900 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-15 16:37:43,432 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:37:44,589 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 16:40:37,312 (INFO) - stripe - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
+2025-08-15 16:40:37,803 (INFO) - stripe - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=403
+2025-08-15 16:40:37,803 (INFO) - stripe - error_code=secret_key_required error_message='This API call cannot be made with a publishable API key. Please use a secret API key. You can find a list of your API keys at https://dashboard.stripe.com/account/apikeys.' error_param=None error_type=invalid_request_error message='Stripe v1 API error received'
+2025-08-15 16:40:37,826 (ERROR) - django.request - Internal Server Error: /checkout/59146e09-970c-4979-a8d1-7ccd9f4fde61/start/
+Traceback (most recent call last):
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/Users/mdahmedking6/DjangoWork/core/views.py", line 72, in start_checkout
+    session = stripe.checkout.Session.create(
+        mode="payment",
+    ...<2 lines>...
+        cancel_url=cancel_url,
+    )
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/stripe/checkout/_session.py", line 5019, in create
+    cls._static_request(
+    ~~~~~~~~~~~~~~~~~~~^
+        "post",
+        ^^^^^^^
+        cls.class_url(),
+        ^^^^^^^^^^^^^^^^
+        params=params,
+        ^^^^^^^^^^^^^^
+    ),
+    ^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/stripe/_api_resource.py", line 172, in _static_request
+    return _APIRequestor._global_instance().request(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        method_,
+        ^^^^^^^^
+    ...<3 lines>...
+        base_address=base_address,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/stripe/_api_requestor.py", line 197, in request
+    resp = requestor._interpret_response(rbody, rcode, rheaders, api_mode)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/stripe/_api_requestor.py", line 853, in _interpret_response
+    self.handle_error_response(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        rbody, rcode, resp.data, rheaders, api_mode
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/stripe/_api_requestor.py", line 336, in handle_error_response
+    raise err
+stripe._error.PermissionError: Request req_fBxSHXOdx1SNrL: This API call cannot be made with a publishable API key. Please use a secret API key. You can find a list of your API keys at https://dashboard.stripe.com/account/apikeys.
+2025-08-15 16:55:55,409 (INFO) - stripe - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
+2025-08-15 16:55:56,042 (INFO) - stripe - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=403
+2025-08-15 16:55:56,043 (INFO) - stripe - error_code=secret_key_required error_message='This API call cannot be made with a publishable API key. Please use a secret API key. You can find a list of your API keys at https://dashboard.stripe.com/account/apikeys.' error_param=None error_type=invalid_request_error message='Stripe v1 API error received'
+2025-08-15 16:55:56,072 (ERROR) - django.request - Internal Server Error: /checkout/59146e09-970c-4979-a8d1-7ccd9f4fde61/start/
+Traceback (most recent call last):
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/Users/mdahmedking6/DjangoWork/core/views.py", line 72, in start_checkout
+    session = stripe.checkout.Session.create(
+        mode="payment",
+    ...<2 lines>...
+        cancel_url=cancel_url,
+    )
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/stripe/checkout/_session.py", line 5019, in create
+    cls._static_request(
+    ~~~~~~~~~~~~~~~~~~~^
+        "post",
+        ^^^^^^^
+        cls.class_url(),
+        ^^^^^^^^^^^^^^^^
+        params=params,
+        ^^^^^^^^^^^^^^
+    ),
+    ^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/stripe/_api_resource.py", line 172, in _static_request
+    return _APIRequestor._global_instance().request(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        method_,
+        ^^^^^^^^
+    ...<3 lines>...
+        base_address=base_address,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/stripe/_api_requestor.py", line 197, in request
+    resp = requestor._interpret_response(rbody, rcode, rheaders, api_mode)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/stripe/_api_requestor.py", line 853, in _interpret_response
+    self.handle_error_response(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        rbody, rcode, resp.data, rheaders, api_mode
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/stripe/_api_requestor.py", line 336, in handle_error_response
+    raise err
+stripe._error.PermissionError: Request req_xsgdtjxoPF59JL: This API call cannot be made with a publishable API key. Please use a secret API key. You can find a list of your API keys at https://dashboard.stripe.com/account/apikeys.
+2025-08-15 16:56:11,160 (WARNING) - django.request - Method Not Allowed (GET): /checkout/59146e09-970c-4979-a8d1-7ccd9f4fde61/start/
+2025-08-15 16:56:12,755 (WARNING) - django.request - Method Not Allowed (GET): /checkout/59146e09-970c-4979-a8d1-7ccd9f4fde61/start/
+2025-08-15 16:56:13,994 (WARNING) - django.request - Method Not Allowed (GET): /checkout/59146e09-970c-4979-a8d1-7ccd9f4fde61/start/
+2025-08-15 16:56:14,354 (WARNING) - django.request - Method Not Allowed (GET): /checkout/59146e09-970c-4979-a8d1-7ccd9f4fde61/start/
+2025-08-15 16:56:47,979 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:56:49,212 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 16:57:12,730 (WARNING) - django.request - Not Found: /store/cart/bind/59146e09970c4979a8d17ccd9f4fde61
+2025-08-15 16:57:35,996 (INFO) - stripe - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
+2025-08-15 16:57:36,599 (INFO) - stripe - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=403
+2025-08-15 16:57:36,599 (INFO) - stripe - error_code=secret_key_required error_message='This API call cannot be made with a publishable API key. Please use a secret API key. You can find a list of your API keys at https://dashboard.stripe.com/account/apikeys.' error_param=None error_type=invalid_request_error message='Stripe v1 API error received'
+2025-08-15 16:57:36,616 (ERROR) - django.request - Internal Server Error: /checkout/59146e09-970c-4979-a8d1-7ccd9f4fde61/start/
+Traceback (most recent call last):
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/Users/mdahmedking6/DjangoWork/core/views.py", line 72, in start_checkout
+    session = stripe.checkout.Session.create(
+        mode="payment",
+    ...<2 lines>...
+        cancel_url=cancel_url,
+    )
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/stripe/checkout/_session.py", line 5019, in create
+    cls._static_request(
+    ~~~~~~~~~~~~~~~~~~~^
+        "post",
+        ^^^^^^^
+        cls.class_url(),
+        ^^^^^^^^^^^^^^^^
+        params=params,
+        ^^^^^^^^^^^^^^
+    ),
+    ^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/stripe/_api_resource.py", line 172, in _static_request
+    return _APIRequestor._global_instance().request(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        method_,
+        ^^^^^^^^
+    ...<3 lines>...
+        base_address=base_address,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/stripe/_api_requestor.py", line 197, in request
+    resp = requestor._interpret_response(rbody, rcode, rheaders, api_mode)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/stripe/_api_requestor.py", line 853, in _interpret_response
+    self.handle_error_response(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        rbody, rcode, resp.data, rheaders, api_mode
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/stripe/_api_requestor.py", line 336, in handle_error_response
+    raise err
+stripe._error.PermissionError: Request req_c2CEsHio1Qfrdh: This API call cannot be made with a publishable API key. Please use a secret API key. You can find a list of your API keys at https://dashboard.stripe.com/account/apikeys.
+2025-08-15 16:58:14,072 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-15 16:58:14,580 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 16:58:15,805 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 17:02:05,764 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 17:02:07,018 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 17:02:16,483 (INFO) - stripe - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
+2025-08-15 17:02:17,795 (INFO) - stripe - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2025-08-15 17:07:03,826 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/core/urls.py changed, reloading.
+2025-08-15 17:07:04,307 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 17:07:05,559 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 17:11:52,675 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/core/views.py changed, reloading.
+2025-08-15 17:11:53,195 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 17:11:54,433 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 17:11:58,836 (INFO) - stripe - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
+2025-08-15 17:11:59,642 (INFO) - stripe - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2025-08-15 17:26:23,422 (ERROR) - django.request - Internal Server Error: /store/product/4/recommendations/
+Traceback (most recent call last):
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django_redis/cache.py", line 29, in _decorator
+    return method(self, *args, **kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django_redis/cache.py", line 99, in _get
+    return self.client.get(key, default=default, version=version, client=client)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django_redis/client/default.py", line 300, in get
+    raise ConnectionInterrupted(connection=client) from e
+django_redis.exceptions.ConnectionInterrupted: Redis ConnectionError: Error 61 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/mdahmedking6/DjangoWork/store/views.py", line 85, in recommendations
+    if cache.get(cache_key) is None:
+       ~~~~~~~~~^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/debug_toolbar/panels/cache.py", line 42, in wrapper
+    return panel._record_call(cache, name, original_method, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/debug_toolbar/panels/cache.py", line 151, in _record_call
+    value = original_method(*args, **kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django_redis/cache.py", line 92, in get
+    value = self._get(key, default, version, client)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django_redis/cache.py", line 36, in _decorator
+    raise e.__cause__  # noqa: B904
+    ^^^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django_redis/client/default.py", line 298, in get
+    value = client.get(key)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/redis/commands/core.py", line 1829, in get
+    return self.execute_command("GET", name, keys=[name])
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/redis/client.py", line 623, in execute_command
+    return self._execute_command(*args, **options)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/redis/client.py", line 629, in _execute_command
+    conn = self.connection or pool.get_connection()
+                              ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/redis/utils.py", line 191, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/redis/connection.py", line 1530, in get_connection
+    connection.connect()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/redis/connection.py", line 379, in connect
+    self.connect_check_health(check_health=True)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/redis/connection.py", line 391, in connect_check_health
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to 127.0.0.1:6379. Connection refused.
+2025-08-15 18:30:42,508 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 18:31:06,691 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/core/urls.py changed, reloading.
+2025-08-15 18:31:07,107 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 18:31:08,339 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 18:31:21,644 (ERROR) - django.request - Internal Server Error: /checkout/59146e09-970c-4979-a8d1-7ccd9f4fde61/start/
+Traceback (most recent call last):
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/views/decorators/http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "/Users/mdahmedking6/DjangoWork/core/views.py", line 29, in start_checkout
+    cancel_url = request.build_absolute_uri(reverse("core:cancel"))
+                                            ~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/urls/base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'cancel' not found. 'cancel' is not a valid view function or pattern name.
+2025-08-15 18:31:44,149 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/core/urls.py changed, reloading.
+2025-08-15 18:31:44,661 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 18:31:47,094 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/core/views.py changed, reloading.
+2025-08-15 18:31:47,457 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 18:31:48,516 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 18:31:57,891 (INFO) - stripe - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
+2025-08-15 18:31:58,595 (INFO) - stripe - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2025-08-15 18:32:28,596 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/core/views.py changed, reloading.
+2025-08-15 18:32:29,133 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 18:32:30,181 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 18:32:37,667 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/core/views.py changed, reloading.
+2025-08-15 18:32:38,128 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 18:32:39,166 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 18:32:43,506 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/core/views.py changed, reloading.
+2025-08-15 18:32:43,996 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 18:32:45,033 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 18:33:03,732 (INFO) - stripe - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
+2025-08-15 18:33:04,405 (INFO) - stripe - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2025-08-15 18:37:43,272 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-15 18:37:44,317 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-15 18:37:56,684 (INFO) - stripe - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
+2025-08-15 18:37:57,616 (INFO) - stripe - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
