@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>Your Cart</title></head>
+  <body>
+    <h1>Your Cart</h1>
+
+    {% if items %}
+      <ul>
+        {% for it in items %}
+          <li>{{ it.product.title }} × {{ it.quantity }} — {{ it.product.price }}</li>
+        {% endfor %}
+      </ul>
+      <p><strong>Total:</strong> {{ total|floatformat:2 }}</p>
+
+      <!-- POST to start Stripe Checkout -->
+      <form action="{% url 'core:start-checkout' cart.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Pay with Stripe (Test)</button>
+      </form>
+    {% else %}
+      <p>Your cart is empty.</p>
+    {% endif %}
+  </body>
+</html>
