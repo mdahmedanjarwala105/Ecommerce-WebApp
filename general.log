@@ -724,3 +724,95 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'cancel' not found. 'cancel' 
 2025-08-15 18:37:44,317 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
 2025-08-15 18:37:56,684 (INFO) - stripe - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
 2025-08-15 18:37:57,616 (INFO) - stripe - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2025-08-16 14:16:39,223 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 14:16:41,589 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 14:16:43,275 (WARNING) - django.request - Not Found: /favicon.ico
+2025-08-16 14:16:57,015 (INFO) - stripe - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
+2025-08-16 14:16:57,760 (INFO) - stripe - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2025-08-16 14:18:05,328 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 14:18:05,861 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 14:18:07,079 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 14:18:08,316 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 14:18:08,848 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 14:18:09,869 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 15:25:58,968 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 15:26:00,377 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 15:26:19,138 (INFO) - stripe - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
+2025-08-16 15:26:19,874 (INFO) - stripe - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2025-08-16 15:26:48,786 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 15:26:49,309 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 15:26:50,545 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 15:26:51,811 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 15:26:52,330 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 15:26:53,355 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 15:26:57,692 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 15:26:58,203 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 15:26:59,232 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 15:27:09,834 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 15:27:10,371 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 15:27:11,406 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 15:27:12,633 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 15:27:13,079 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 15:27:14,077 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 15:27:15,340 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 15:27:15,845 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 15:27:16,857 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 15:27:19,133 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 15:27:19,648 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 15:27:20,666 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 15:27:27,082 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 15:27:27,611 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 15:27:28,671 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 15:27:33,009 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 15:27:33,528 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 15:27:34,563 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 15:27:45,143 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 15:27:45,726 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 15:27:46,758 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 15:27:50,068 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 15:27:50,599 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 15:27:51,646 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 15:27:57,059 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 15:27:57,610 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 15:27:58,619 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 15:28:01,923 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 15:28:02,412 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 15:28:03,398 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 15:28:06,695 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 15:28:07,206 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 15:28:08,203 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 15:28:14,558 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 15:28:15,096 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 15:28:16,157 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 15:28:17,419 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 15:28:17,898 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 15:28:18,891 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 15:28:21,173 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 15:28:21,711 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 15:28:22,742 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 15:28:24,028 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 15:28:24,520 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 15:28:25,525 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 15:28:32,923 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 15:28:33,419 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 15:28:34,434 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 18:15:58,057 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 18:15:58,593 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 18:16:06,126 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 18:16:06,604 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 18:16:47,726 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 18:16:48,742 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 18:16:59,409 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 18:16:59,919 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 18:17:08,263 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/store/views.py changed, reloading.
+2025-08-16 18:17:08,767 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 18:17:09,776 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 18:17:12,743 (WARNING) - django.request - Unauthorized: /store/carts/
+2025-08-16 18:17:20,302 (INFO) - stripe - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
+2025-08-16 18:17:21,032 (INFO) - stripe - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2025-08-16 18:18:23,894 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 18:18:25,239 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 18:19:07,264 (INFO) - stripe - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
+2025-08-16 18:19:08,043 (INFO) - stripe - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2025-08-16 18:19:35,136 (INFO) - stripe - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
+2025-08-16 18:19:35,692 (INFO) - stripe - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
