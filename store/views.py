@@ -231,7 +231,7 @@ def cart_page(request: Request):
     if cart_id:
         cart = Cart.objects.filter(pk=cart_id).first()
 
-    #or else pick best cart from DB (non-empty first, else newest)
+    # or else pick best cart from DB (non-empty first, else newest)
     if cart is None:
         cart = (
             Cart.objects.annotate(items_count=Count("items"))
