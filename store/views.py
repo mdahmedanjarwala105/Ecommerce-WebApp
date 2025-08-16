@@ -48,6 +48,8 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.db import transaction
 from uuid import UUID
 from django.http import HttpResponseBadRequest
+from django.db.models import Count
+from django.shortcuts import render
 
 
 class ProductViewSet(ModelViewSet):
@@ -221,54 +223,30 @@ class ProductImageViewSet(ModelViewSet):
         return ProductImage.objects.filter(product_id=self.kwargs["product_pk"])
 
 
-def _get_or_create_cart(request: Request) -> Cart:
-    cart_id = request.session.get("cart_id")
-    cart = None
-    if cart_id:
-        try:
-            cart = Cart.objects.get(pk=cart_id)
-        except Cart.DoesNotExist:
-            cart = None
-    if cart is None:
-        cart = Cart.objects.create()
-        request.session["cart_id"] = str(cart.id)
-    return cart
-
-
-def _uuid_from_any(s: str) -> UUID:
-    s = s.replace("-", "")
-    return UUID(s)
-
-
-def _get_or_create_cart(request: Request) -> Cart:
-    cart_id = request.session.get("cart_id")
-    cart = None
-    if cart_id:
-        try:
-            cart = Cart.objects.get(pk=cart_id)
-        except Cart.DoesNotExist:
-            cart = None
-    if cart is None:
-        cart = Cart.objects.create()
-        request.session["cart_id"] = str(cart.id)
-    return cart
-
-
 def cart_page(request: Request):
-    """
-    Minimal HTML cart page.
-    If ?id=<uuid> is provided, bind that cart to this session; otherwise use session cart.
-    """
-    bind = request.GET.get("id")
-    if bind:
-        try:
-            cart = Cart.objects.get(pk=_uuid_from_any(bind))
-            request.session["cart_id"] = str(cart.id)  # bind to session
-        except (ValueError, Cart.DoesNotExist):
-            return HttpResponseBadRequest("Invalid cart id")
-    else:
-        cart = _get_or_create_cart(request)
+    cart = None
 
+    # use session cart if present
+    cart_id = request.session.get("cart_id")
+    if cart_id:
+        cart = Cart.objects.filter(pk=cart_id).first()
+
+    #or else pick best cart from DB (non-empty first, else newest)
+    if cart is None:
+        cart = (
+            Cart.objects.annotate(items_count=Count("items"))
+            .order_by("-items_count", "-created_at")  # non-empty first, then newest
+            .first()
+        )
+
+    # 3) or else create a new one
+    if cart is None:
+        cart = Cart.objects.create()
+
+    # save the cart-id in session
+    request.session["cart_id"] = str(cart.id)
+
+    # render cart it's items and total price in cart.html
     items = CartItem.objects.select_related("product").filter(cart=cart)
     total = sum(i.product.price * i.quantity for i in items)
     return render(
