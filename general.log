@@ -816,3 +816,117 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'cancel' not found. 'cancel' 
 2025-08-16 18:19:08,043 (INFO) - stripe - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
 2025-08-16 18:19:35,136 (INFO) - stripe - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
 2025-08-16 18:19:35,692 (INFO) - stripe - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2025-08-16 18:45:21,472 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-16 18:45:22,733 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-16 18:45:29,391 (INFO) - stripe - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
+2025-08-16 18:45:30,088 (INFO) - stripe - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2025-08-18 17:10:40,841 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-18 17:10:43,264 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-18 17:10:44,768 (WARNING) - django.request - Not Found: /favicon.ico
+2025-08-18 17:10:48,730 (ERROR) - django.request - Internal Server Error: /store/cart/
+Traceback (most recent call last):
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/urls/base.py", line 81, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'core'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mdahmedking6/DjangoWork/store/views.py", line 252, in cart_page
+    return render(
+        request, "store/cart.html", {"cart": cart, "items": items, "total": total}
+    )
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/template/defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/urls/base.py", line 92, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'core' is not a registered namespace
+2025-08-18 17:10:51,430 (ERROR) - django.request - Internal Server Error: /store/cart/
+Traceback (most recent call last):
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/urls/base.py", line 81, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'core'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mdahmedking6/DjangoWork/store/views.py", line 252, in cart_page
+    return render(
+        request, "store/cart.html", {"cart": cart, "items": items, "total": total}
+    )
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/test/utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/template/defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/mdahmedking6/.local/share/virtualenvs/DjangoWork-KunsKbz5/lib/python3.13/site-packages/django/urls/base.py", line 92, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'core' is not a registered namespace
+2025-08-18 17:11:05,544 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/core/urls.py changed, reloading.
+2025-08-18 17:11:06,080 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-18 17:11:07,315 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
