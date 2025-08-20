@@ -43,13 +43,8 @@ from .serializers import (
     UpdateOrderSerializer,
 )
 from .recommendation import get_similar_products
-from decimal import Decimal
-from django.shortcuts import get_object_or_404, redirect, render
-from django.db import transaction
-from uuid import UUID
-from django.http import HttpResponseBadRequest
-from django.db.models import Count
 from django.shortcuts import render
+from django.db.models import Count
 
 
 class ProductViewSet(ModelViewSet):
