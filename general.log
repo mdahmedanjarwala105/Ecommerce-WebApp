@@ -930,3 +930,8 @@ django.urls.exceptions.NoReverseMatch: 'core' is not a registered namespace
 2025-08-18 17:11:05,544 (INFO) - django.utils.autoreload - /Users/mdahmedking6/DjangoWork/core/urls.py changed, reloading.
 2025-08-18 17:11:06,080 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
 2025-08-18 17:11:07,315 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-30 20:00:09,622 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-08-30 20:00:15,588 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-08-30 20:00:18,134 (WARNING) - django.request - Not Found: /favicon.ico
+2025-08-30 20:02:57,607 (INFO) - stripe - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
+2025-08-30 20:02:58,447 (INFO) - stripe - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
