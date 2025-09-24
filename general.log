@@ -935,3 +935,10 @@ django.urls.exceptions.NoReverseMatch: 'core' is not a registered namespace
 2025-08-30 20:00:18,134 (WARNING) - django.request - Not Found: /favicon.ico
 2025-08-30 20:02:57,607 (INFO) - stripe - message='Request to Stripe api' method=post url=https://api.stripe.com/v1/checkout/sessions
 2025-08-30 20:02:58,447 (INFO) - stripe - message='Stripe API response' path=https://api.stripe.com/v1/checkout/sessions response_code=200
+2025-09-24 12:35:36,545 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2025-09-24 12:35:42,560 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2025-09-24 12:36:50,818 (WARNING) - django.request - Unauthorized: /store/carts/
+2025-09-24 12:37:02,644 (WARNING) - django.request - Not Found: /store/order
+2025-09-24 12:37:12,447 (WARNING) - django.request - Unauthorized: /store/orders/
+2025-09-24 12:37:18,778 (WARNING) - django.request - Not Found: /store/customers
+2025-09-24 12:37:22,723 (WARNING) - django.request - Unauthorized: /store/customer/
