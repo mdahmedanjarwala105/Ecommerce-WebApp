@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  DB_ENGINE: django.db.backends.sqlite3
+  DB_NAME: test_db
+  SECRET_KEY: ci-secret-key-not-for-production
+  PYTHONUNBUFFERED: 1
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install pipenv
+        run: pip install pipenv
+
+      - name: Cache pipenv dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pipenv
+          key: ${{ runner.os }}-pipenv-${{ hashFiles('Pipfile.lock') }}
+
+      - name: Install dependencies
+        run: pipenv install --dev
+
+      - name: Run migrations
+        run: pipenv run python manage.py migrate
+
+      - name: Run tests
+        run: pipenv run python -m pytest
